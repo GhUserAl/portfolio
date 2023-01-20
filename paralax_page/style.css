@@ -1,0 +1,73 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    line-height: 1.8em;
+    font-family:"Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #666;
+}
+
+.imagem-1, .imagem-2, .imagem-3 {
+    background-position: center;
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.imagem-1 {
+    background-image: url(imagens/back.jpg);
+    min-height: 100%;
+}
+
+.imagem-2 {
+    background-image: url(imagens/luz.jpg);
+    min-height: 400px;
+}
+
+.imagem-3 {
+    background-image: url(imagens/predio.jpg);
+    min-height: 400px;
+}
+
+.texto {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+}
+
+.texto .borda {
+    background-color: #666;
+    color: white;
+    padding: 20px;
+}
+
+.texto .borda.trans {
+    background-color: transparent;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light {
+    background-color:#f4f4f4;
+    color:#666;
+}
+
+.section-dark {
+    background-color: rgb(32, 35, 44);
+    color: #f4f4f4;
+}
+
+@media (max-width:568px) {
+    .imagem-1, .imagem-2, .imagem-3 {
+        background-attachment: scroll;
+    }
+}

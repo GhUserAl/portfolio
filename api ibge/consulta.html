@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Consulta IBGE</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="cover.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="https://logodownload.org/wp-content/uploads/2018/02/ibge-logo.png" width="120" height="36" class="img-responsive" style="margin-left: 9em;" alt="IBGE">
+        </a>
+      </nav> -->
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead-brand"><a class="navbar-brand" href="#">
+                        <img src="https://logodownload.org/wp-content/uploads/2018/02/ibge-logo.png" width="120"
+                            height="36" class="img-responsive" alt="IBGE">
+                </h3>
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link" href="index.html">Início</a>
+                    <a class="nav-link active" href="#">Consulta</a>
+                </nav>
+            </div>
+        </header>
+
+        <main role="main" class="d-flex h-100 p-7">
+            <div class="container">
+                </br>
+                <h4 id="titulo">Realizar consulta</h4>
+                <hr>
+                <form action="resultado.html" method="POST">
+
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label for="estado_a">Primeiro estado</label>
+                            <select name="estado_a" class="form-control" id="estado_a">
+                                <option>Acre</option>
+                                <option>Alagoas</option>
+                                <option>Amapá</option>
+                                <option>Amazonas</option>
+                                <option>Bahia</option>
+                                <option>Ceará</option>
+                                <option>Distrito Federal</option>
+                                <option>Espírito Santo</option>
+                                <option>Goiás</option>
+                                <option>Maranhão</option>
+                                <option>Mato Grosso</option>
+                                <option>Mato Grosso do Sul</option>
+                                <option>Minas Gerais</option>
+                                <option>Pará</option>
+                                <option>Paraíba</option>
+                                <option>Paraná</option>
+                                <option>Pernambuco</option>
+                                <option>Piauí</option>
+                                <option>Rio de Janeiro</option>
+                                <option>Rio Grande do Norte</option>
+                                <option>Rio Grande do Sul</option>
+                                <option>Rondônia</option>
+                                <option>Roraima</option>
+                                <option>Santa Catarina</option>
+                                <option>São Paulo</option>
+                                <option>Sergipe</option>
+                                <option>Tocantins</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="estado_b">Segundo estado</label>
+                            <select name="estado_b" class="form-control" id="estado_b">
+                                <option>Acre</option>
+                                <option>Alagoas</option>
+                                <option>Amapá</option>
+                                <option>Amazonas</option>
+                                <option>Bahia</option>
+                                <option>Ceará</option>
+                                <option>Distrito Federal</option>
+                                <option>Espírito Santo</option>
+                                <option>Goiás</option>
+                                <option>Maranhão</option>
+                                <option>Mato Grosso</option>
+                                <option>Mato Grosso do Sul</option>
+                                <option>Minas Gerais</option>
+                                <option>Pará</option>
+                                <option>Paraíba</option>
+                                <option>Paraná</option>
+                                <option>Pernambuco</option>
+                                <option>Piauí</option>
+                                <option>Rio de Janeiro</option>
+                                <option>Rio Grande do Norte</option>
+                                <option>Rio Grande do Sul</option>
+                                <option>Rondônia</option>
+                                <option>Roraima</option>
+                                <option>Santa Catarina</option>
+                                <option>São Paulo</option>
+                                <option>Sergipe</option>
+                                <option>Tocantins</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tipoConsulta" id="inlineRadio1"
+                            value="populacao" checked>
+                        <label class="form-check-label" for="inlineRadio1">População</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tipoConsulta" id="inlineRadio2" value="pib">
+                        <label class="form-check-label" for="inlineRadio2">PIB</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="guardaDados()">Consultar</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function guardaDados() {
+            if (typeof (localStorage) != "undefined") {
+                localStorage.estado_a = document.getElementById("estado_a").value;
+
+                localStorage.estado_b = document.getElementById("estado_b").value;
+
+                localStorage.tipoConsulta = document.querySelector('input[name="tipoConsulta"]:checked').value;
+            }
+        }
+    </script>
+</body>
+
+</html>
